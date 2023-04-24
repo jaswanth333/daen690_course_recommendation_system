@@ -80,14 +80,15 @@ def preprocess(df):
     'CIS Tech Innovator Year':'Robotics',
     'Robotics Regent':'Robotics',
     'Game Development Microsoft Arcade':'Microsoft Arcade',
-    'Game Development Block':'Game Development'
+    'Game Development Block':'Game Development',
+    'Game Combat Championship':'Game Development'
     }
 
     df['course_name'] = df['course_name'].replace(replacers)
 
     df = df.loc[~((
     (df['course_name']=='Art & Craft for Juniors')|
-    (df['course_name']=='Technology Onsite ')|
+    (df['course_name']=='Technology Onsite')|
     (df['course_name']=='French Language Course')|
     (df['course_name']=='Speech and Drama')|
     #(df['course_name']=='Young Product Designer')|
@@ -97,7 +98,7 @@ def preprocess(df):
     #(df['course_name']=='Young Honcho')|
     (df['course_name']=='Half Term Camp 2022')|
     (df['course_name']=='Technology Boot Camp')|
-    (df['course_name']=='World Robot Olympiad ')|
+    (df['course_name']=='World Robot Olympiad')|
     (df['course_name']=='Photography')|
     (df['course_name']=='Public Speaking')|
     (df['course_name']=='Spring Camp')|
