@@ -11,7 +11,13 @@ def recommendations(course_df,predictions,enrolled):
     n  = int(input("Enter no: of Recommendations:"))
     best_predictions = pred.sort_values(by='err')['iid'].head(n).to_list()
     courses=course_df.loc[course_df['course_id'].isin(best_predictions)]["course_name"].to_list()
+    
+    #courses = ',\n'.join(courses)
     # courses = list(chain(*courses))
     # enrolled = list(chain(*enrolled))
-    print("------------------------------Courses Enrolled--------------------------------\n",enrolled)
-    print("-------------------------------Recommendations------------------------------\n",courses)
+    print("------------------------------Courses Enrolled--------------------------------\n")
+    for i in range(0, len(enrolled)):
+     print(i+1,'.',enrolled[i])
+    print("-------------------------------Recommendations------------------------------\n")
+    for i in range(0, len(courses)):
+     print(i+1,'.',courses[i])
