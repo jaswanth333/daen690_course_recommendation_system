@@ -35,7 +35,6 @@ def svd_model(preprocessed_df,student_id):
         #predictions = svd_algo.test(validation_set)
         print("------------------------------Model Trained------------------------------")
         recommendations(course_df,predictions,enrolled)
-        
     else:
         print("------------------------Running pre-trained model-------------------------")
         svd_algo = pickle.load(open('models/svd_algo.sav', 'rb'))
