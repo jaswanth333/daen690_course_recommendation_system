@@ -4,8 +4,6 @@ from surprise import Dataset,accuracy
 from preprocess import preprocess
 from model import svd_model
 
- 
-
 df=pd.read_csv("dataset/student_course_data.csv")
 processed_data=preprocess(df)
 processed_data.to_csv("dataset/processed_data.csv",index=False)
