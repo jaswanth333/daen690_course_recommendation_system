@@ -9,13 +9,19 @@ from recommendations import recommendations
 
 def svd_model(preprocessed_df,student_id):
     reader = Reader(rating_scale=(1,5))
+
+    #Filter courses in the education level
+    edu_lvl=preprocessed_df.loc[preprocessed_df.student_id==student_id, 'education'].values[0]
+    preprocessed_df=preprocessed_df[preprocessed_df['education']==edu_lvl]
+
     #Create Course ID's
     course_df=pd.DataFrame(preprocessed_df['course_name'].unique(),columns=["course_name"])
     index = pd.Index(range(0, len(course_df.index), 1))
     course_df["course_id"] = course_df.index
-    
+ 
     validation_set,enrolled=test_set(preprocessed_df,student_id,course_df)
     data = Dataset.load_from_df(preprocessed_df[['student_id', 'course_id', 'course_rating']], reader)
+
     trainSet = data.build_full_trainset()
     print("------------------------------------------------------------------")
     model_input = input("1:Update Model | 2.Run pre-trained model\n")
