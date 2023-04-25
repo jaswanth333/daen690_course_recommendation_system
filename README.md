@@ -11,7 +11,7 @@ Our work introduces numerous machine learning techniques and methods to evaluate
 
 # Getting Started
 
-We recommend [conda](https://docs.conda.io/projects/conda/en/latest/glossary.html?highlight=environment#conda-environment) for environment management, and [VS Code](https://code.visualstudio.com/) for development. To run the main.py follow the instructions below.
+We recommend [conda](https://docs.conda.io/projects/conda/en/latest/glossary.html?highlight=environment#conda-environment) for environment management, and [VS Code](https://code.visualstudio.com/) for development. To run the [main.py] https://github.com/jaswanth333/daen690_course_recommendation_system/blob/main/main.py follow the instructions below.
 
 
 ```bash
@@ -50,7 +50,6 @@ git clone https://github.com/jaswanth333/daen690_course_recommendation_system
 <p align="justify"> 
 After evaluating the model accuracy, build time and test time it can be concluded that SVD is performing better .This model is capable of handling missing values  and noise in the data and data sparsity problems. Finally, with the SVD algorithm in place an user interactive function with preprocessing pipeline and test set creation pipeline has been implemented. 
 </p>
-To view the running model run [model.py] (main.py)
 
 # Future Work
 <p align="justify"> 
