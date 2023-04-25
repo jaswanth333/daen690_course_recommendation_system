@@ -20,91 +20,73 @@ def preprocess(df):
         if df[i].dtype=='object':
             df[i]=df[i].map(str.strip)
         else:
-            pass    
-    #print("Preprocessed Courses")
+            pass 
+        
+        replacers = {
+        'Python Coding': 'Python Programming',
+        'Public Speaking & Entrepreneurship':'Public Speaking ',
+        'Space STEM':'Robotics',
+        'School':'Robotics',
+        'Artificial Intelligence Summer Program & Internship':'Artifical Intelligence',
+        'Programming & Coding ':'Programming',
+        'FIRST Lego League ':'LEGO Robotics',
+        'JAVA':'JAVA Programming',
+        'World Robot Olympiad Webinar':'Robotics',
+        'STEM Sr':'Robotics',
+        'Public Speaking, Design Thinking and Junior Entrepreneur Program for Students':'Young Entrepreneur',
+        'Mid Term Program':'Artifical Intelligence',
+        'Winter Camp 2022':'Robotics',
+        'Summer Camp 2022':'Robotics',
+        'Winter Camp 2021':'Robotics',
+        'Coding for kids':'Coding For Kids',
+        'Summer Camps':'Robotics',
+        'Python':'Python Programming',
+        'Artifical Intelligence':'Artificial Intelligence',
+        'Artificial Intelligence Program':'Artificial Intelligence',
+        'Artificial Intelligence & Machine Learning':'Artificial Intelligence and Machine Learning',
+        'ALIF Robotics Workshop':'Robotics',
+        'Tech Summer Camp for Juniors' :'Robotics',
+        'AI' :'Artificial Intelligence',
+        'Game Dev with SCRATCH':'Game Development',
+        'Canon Junior Photography':'Photography',
+        'VEX Robotics Competition ':'Virtual Robotics',
+        'VEX IQ Competition ': 'Virtual Robotics',
+        'FIRST LEGO LEAGUE':'First LEGO League',
+        'Metaverse':'Virtual Reality',
+        'STEM Jr':'Robotics',
+        'Graphics Designing':'Graphic Designing',
+        'Spring Camps':'Robotics',
+        'CIS Stem Junior Year':'Robotics',
+        'CIS Tech Innovator Year':'Robotics',
+        'Robotics Regent':'Robotics',
+        'Game Development Microsoft Arcade':'Microsoft Arcade',
+        'Game Development Block':'Game Development',
+        'Game Combat Championship':'Game Development',
+        'Young Designer Program':'Young Designer',
+        'First LEGO League':'LEGO Robotics'
+        }
 
-    replacers = {
-    'Python Coding': 'Python Programming',
-    #'Game and App Development': 'Game Development',
-    #'Graphic Designing & Animation':'Graphic Designing',
-    'Public Speaking & Entrepreneurship':'Public Speaking ',
-    #'Artificial Intelligence for Non Programmers':'Artificial Intelligence',
-    'Space STEM':'Robotics',
-    #'VEX Robotics':'Virtual Robotics',
-    #'FIRST LEGO LEAGUE ':'LEGO Robotics',
-    #'Scratch Coding':'Programming',
-    #'Game Development with Unity':'Game Development',
-    #'Young Game Developer':'Game Developement',
-    'School':'Robotics',
-    #'Artificial Intelligence & Machine Learning':'Artificial Intelligence and Machine Learning',
-    #'Virtual Robotics & Mechatronics':'Virtual Robotics',
-    'Artificial Intelligence Summer Program & Internship':'Artifical Intelligence',
-    'Programming & Coding ':'Programming',
-    'FIRST Lego League ':'LEGO Robotics',
-    #'Game Combat Championship ' :'Game Developement',
-    'JAVA':'JAVA Programming',
-    'World Robot Olympiad Webinar':'Robotics',
-    'STEM Sr':'Robotics',
-    #'Microsoft Arcade':'Game Developement',
-    #'Augmented & Virtual Reality' :'Virtual Reality',
-    #'App Design and Development':'App Development',
-    'Public Speaking, Design Thinking and Junior Entrepreneur Program for Students':'Young Entrepreneur',
-    'Mid Term Program':'Artifical Intelligence',
-    'Winter Camp 2022':'Robotics',
-    'Summer Camp 2022':'Robotics',
-    'Winter Camp 2021':'Robotics',
-    'Coding for kids':'Coding For kids',
-    'Summer Camps':'Robotics',
-    'Python':'Python Programming',
-    'Artifical Intelligence':'Artificial Intelligence',
-    'Artificial Intelligence Program':'Artificial Intelligence',
-    'Artificial Intelligence & Machine Learning':'Artificial Intelligence and Machine Learning',
-    'ALIF Robotics Workshop':'Robotics',
-    'Tech Summer Camp for Juniors' :'Robotics',
-    'AI' :'Artificial Intelligence',
-    #'Drone Technology & Aerodynamics':'Drone Technology',
-    #'Coding for kids':'Programming',
-    'Game Dev with SCRATCH':'Game Development',
-    'Canon Junior Photography':'Photography',
-    #'Coding For Kids':'Programming',
-    'VEX Robotics Competition ':'Virtual Robotics',
-    'VEX IQ Competition ': 'Virtual Robotics',
-    'FIRST LEGO LEAGUE':'First LEGO League',
-    'Metaverse':'Virtual Reality',
-    'STEM Jr':'Robotics',
-    #'3D Designing':'Graphic Designing',
-    #'3D Designing and Printing':'Graphic Designing',
-    'Graphics Designing':'Graphic Designing',
-    'Spring Camps':'Robotics',
-    'CIS Stem Junior Year':'Robotics',
-    'CIS Tech Innovator Year':'Robotics',
-    'Robotics Regent':'Robotics',
-    'Game Development Microsoft Arcade':'Microsoft Arcade',
-    'Game Development Block':'Game Development',
-    'Game Combat Championship':'Game Development'
-    }
 
-    df['course_name'] = df['course_name'].replace(replacers)
+        df['course_name'] = df['course_name'].replace(replacers)
 
-    df = df.loc[~((
-    (df['course_name']=='Art & Craft for Juniors')|
-    (df['course_name']=='Technology Onsite')|
-    (df['course_name']=='French Language Course')|
-    (df['course_name']=='Speech and Drama')|
-    #(df['course_name']=='Young Product Designer')|
-    (df['course_name']=='Tech Innovator')|
-    (df['course_name']=='Train the Trainer')|
-    (df['course_name']=='CIS, Dubai')|
-    #(df['course_name']=='Young Honcho')|
-    (df['course_name']=='Half Term Camp 2022')|
-    (df['course_name']=='Technology Boot Camp')|
-    (df['course_name']=='World Robot Olympiad')|
-    (df['course_name']=='Photography')|
-    (df['course_name']=='Public Speaking')|
-    (df['course_name']=='Spring Camp')|
-    (df['course_name']=='Arduino')))]
+        df = df.loc[~((
+        (df['course_name']=='Art & Craft for Juniors')|
+        (df['course_name']=='Technology Onsite')|
+        (df['course_name']=='French Language Course')|
+        (df['course_name']=='Speech and Drama')|
+        (df['course_name']=='Tech Innovator')|
+        (df['course_name']=='Train the Trainer')|
+        (df['course_name']=='CIS, Dubai')|
+        (df['course_name']=='Half Term Camp 2022')|
+        (df['course_name']=='Technology Boot Camp')|
+        (df['course_name']=='World Robot Olympiad')|
+        (df['course_name']=='Photography')|
+        (df['course_name']=='Public Speaking')|
+        (df['course_name']=='Spring Camp')|
+        (df['course_name']=='Arduino')))]
 
-    #print("Preprocessed Age")
+        df['course_name'] = df['course_name'].replace(replacers)
+
     ##preprocess age
     df = df[(df.age != "14-Oct") & (df.age != "9-May")]
     df['age'] = df['age'].replace(['1'], 'Year 1')
