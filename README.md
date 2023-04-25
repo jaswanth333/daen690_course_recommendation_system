@@ -1,6 +1,9 @@
 # Introduction
 This repistory contains the files and reports for Course Recommendation System created as part of DAEN 690 Capstone project
 
+# Background
+Our work introduces numerous machine learning techniques and methods to evaluate and develop a personalized course recommendation system for an existing user. These recommendations are made based on the course popularity that are reported through dashboard visualizations. After the completion of the course, these details are added to the system after successful completion of the courses and the process repeats indefinitely. A recommendation system is a type of information filtering system that predicts the preferences that a user would give to a product or service. In recent years, these systems have grown in popularity because they can help the users save time and make better decisions. One such recommendation system is the course recommendation system. A course recommendation system can provide personalized recommendations for courses to students based on their preferences or areas of interest. These systems produce accurate and relevant courses that match a student's learning goals using various algorithms and techniques. Several key components of the course recommendation system are data gathering, data analysis, and recommendation algorithms. Collecting student data is the first stage in developing a course recommendation system. This data is then analyzed using machine learning algorithms to identify patterns and trends between users and the respective courses that can be used to forecast the course that a student might want to take next. Our results show a high level of prediction accuracy in recommending courses.
+
 # Getting Started
 We recommend [conda](https://docs.conda.io/projects/conda/en/latest/glossary.html?highlight=environment#conda-environment) for environment management, and [VS Code](https://code.visualstudio.com/) for development. To install the recommenders package and run an example notebook on Linux/WSL:
 
@@ -11,17 +14,17 @@ We recommend [conda](https://docs.conda.io/projects/conda/en/latest/glossary.htm
 conda create -n <environment_name> python=3.10
 conda activate <environment_name>
 
-# 3. Install the recommenders package with examples
+# 3. Install the surprise package
 conda install -c conda-forge scikit-surprise
 
 # 4. create a Jupyter kernel
 python -m ipykernel install --user --name <environment_name> --display-name <kernel_name>
 
 # 5. Clone this repo within vscode or using command:
-git clone https://github.com/microsoft/recommenders.git
+git clone https://github.com/jaswanth333/daen690_course_recommendation_system
 
 # 6. Within VS Code:
-#   a. Open a notebook, e.g., examples/00_quick_start/sar_movielens.ipynb;  
+#   a. Open a notebook, e.g.,notebooks/Preprocessing and EDA.ipynb;  
 #   b. Select Jupyter kernel <kernel_name>;
 #   c. Run the notebook.
 
@@ -40,4 +43,11 @@ git clone https://github.com/microsoft/recommenders.git
 # Results
 After evaluating the model accuracy, build time and test time it can be concluded that SVD is performing better .This model is capable of handling missing values  and noise in the data and data sparsity problems. Finally, with the SVD algorithm in place an user interactive function with preprocessing pipeline and test set creation pipeline has been implemented. 
 
-To view the running model run model.py (daen690_course_recommendation_system/blob/main/model.py)
+To view the running model run [model.py] (main.py)
+
+# Future Work
+In Future Work, Course recommendation systems could benefit from incorporating additional data sources. Information such as the description of the course, domain of the course and the reviews can play an important role in providing recommended courses pertaining to the domain and ignore the ones with negative feedback. 
+On the additional is in place, the existing model can be updated by implementing deep learning models or hybrid models that combine multiple techniques could be used to improve the accuracy of recommendations and learn the complex relationships between items and users.
+Also, more knowledge on the social and contextual elements that influence course selection could potentially enhance course recommendation systems.
+Overall, there are many areas of future work for course recommendation systems. By incorporating more data sources, machine learning techniques, and social/contextual information, and by improving the explain ability of recommendations and considering long-term outcomes, these systems could become even more valuable tools for students and educators alike.
+
