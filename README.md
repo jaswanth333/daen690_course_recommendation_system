@@ -11,7 +11,7 @@ Our work introduces numerous machine learning techniques and methods to evaluate
 
 # Getting Started
 
-We recommend [conda](https://docs.conda.io/projects/conda/en/latest/glossary.html?highlight=environment#conda-environment) for environment management, and [VS Code](https://code.visualstudio.com/) for development. To run the [main.py] (https://github.com/jaswanth333/daen690_course_recommendation_system/blob/main/main.py) follow the instructions below.
+We recommend [conda](https://docs.conda.io/projects/conda/en/latest/glossary.html?highlight=environment#conda-environment) for environment management, and [VS Code](https://code.visualstudio.com/) for development. To run the [main.py](https://github.com/jaswanth333/daen690_course_recommendation_system/blob/main/main.py) follow the instructions below.
 
 
 ```bash
