@@ -1,10 +1,8 @@
 # Introduction
 <p align="justify"> 
-This repistory contains the files and reports for Course Recommendation System created as part of DAEN 690 Capstone project,George Mason University,Spring 2023 under the guidance of [Dr.Isaac Gang](igang@gmu.edu) 
-</p>
+This repistory contains the files and reports for Course Recommendation System created as part of DAEN 690 Capstone project,George Mason University,Spring 2023 under the guidance of <a href="MAILTO:igang@gmu.edu">Dr.Isaac Gang</a></p>
 
 # Background
-
 <p align="justify"> 
 Our work introduces numerous machine learning techniques and methods to evaluate and develop a personalized course recommendation system for an existing user. These recommendations are made based on the course popularity that are reported through dashboard visualizations. After the completion of the course, these details are added to the system after successful completion of the courses and the process repeats indefinitely. A recommendation system is a type of information filtering system that predicts the preferences that a user would give to a product or service. In recent years, these systems have grown in popularity because they can help the users save time and make better decisions. One such recommendation system is the course recommendation system. A course recommendation system can provide personalized recommendations for courses to students based on their preferences or areas of interest. These systems produce accurate and relevant courses that match a student's learning goals using various algorithms and techniques. Several key components of the course recommendation system are data gathering, data analysis, and recommendation algorithms. Collecting student data is the first stage in developing a course recommendation system. This data is then analyzed using machine learning algorithms to identify patterns and trends between users and the respective courses that can be used to forecast the course that a student might want to take next. Our results show a high level of prediction accuracy in recommending courses.
 </p>
