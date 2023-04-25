@@ -11,22 +11,22 @@ Our work introduces numerous machine learning techniques and methods to evaluate
 
 # Getting Started
 
-We recommend [conda](https://docs.conda.io/projects/conda/en/latest/glossary.html?highlight=environment#conda-environment) for environment management, and [VS Code](https://code.visualstudio.com/) for development. To install the recommenders package and run an example notebook on Linux/WSL:
+We recommend [conda](https://docs.conda.io/projects/conda/en/latest/glossary.html?highlight=environment#conda-environment) for environment management, and [VS Code](https://code.visualstudio.com/) for development. To run the main.py follow the instructions below.
 
 
 ```bash
 
-# 2. Create and activate a new conda environment
+# 1. Create and activate a new conda environment
 conda create -n <environment_name> python=3.10
 conda activate <environment_name>
 
-# 3. Install the surprise package
+# 2. Install the surprise package
 conda install -c conda-forge scikit-surprise
 
-# 4. create a Jupyter kernel
+# 3. create a Jupyter kernel
 python -m ipykernel install --user --name <environment_name> --display-name <kernel_name>
 
-# 5. Clone this repo within vscode or using command:
+# 4. Clone this repo within vscode or using command:
 git clone https://github.com/jaswanth333/daen690_course_recommendation_system
 
 # 6. Within VS Code:
