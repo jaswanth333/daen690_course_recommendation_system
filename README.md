@@ -35,14 +35,14 @@ git clone https://github.com/jaswanth333/daen690_course_recommendation_system
 ```
 # Algorithms
 
-| Model         | Test RMSE | Train Time | Test Time |
-|---------------|-----------|------------|-----------|
-| SVD           | 0.932     | 0.058      | 0.013     |
-| SVDpp         | 0.938     | 0.080      | 0.030     |
-| KNNBasic      | 0.982     | 0.582      | 0.437     |
-| KNNWithMeans  | 1.117     | 0.567      | 0.452     |
-| KNNWithZScore | 1.126     | 0.669      | 0.468     |
-| NMF           | 1.191     | 0.231      | 0.012     |
+| Model         | Test RMSE | Train Time | Test Time |     Mean Average Precision @ k    |     Mean Average Recall @ k    |
+|---------------|-----------|------------|-----------|:---------------------------------:|:------------------------------:|
+| SVD           | 0.932     | 0.058      | 0.013     |                 0.7               |               0.82             |
+| SVDpp         | 0.938     | 0.080      | 0.030     |                 0.7               |               0.82             |
+| KNNBasic      | 0.982     | 0.582      | 0.437     |                0.67               |               0.87             |
+| KNNWithMeans  | 1.117     | 0.567      | 0.452     |                0.63               |               0.93             |
+| KNNWithZScore | 1.126     | 0.669      | 0.468     |                 0.7               |               0.82             |
+| NMF           | 1.191     | 0.231      | 0.012     |                0.69               |               0.81             |
 
 # Results
 <p align="justify"> 
