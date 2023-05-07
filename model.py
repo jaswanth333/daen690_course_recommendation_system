@@ -23,8 +23,8 @@ def svd_model(preprocessed_df,student_id):
     data = Dataset.load_from_df(preprocessed_df[['student_id', 'course_id', 'course_rating']], reader)
 
     trainSet = data.build_full_trainset()
-    print("------------------------------------------------------------------")
-    model_input = input("1:Update Model | 2.Run pre-trained model\n")
+    #print("------------------------------------------------------------------")
+    model_input = input("1.Update Model\n2.Run pre-trained model\n")
     if model_input=='1':
         np.random.seed(1)
         #print("---------------------------Training the model----------------------------")

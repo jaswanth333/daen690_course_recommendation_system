@@ -18,7 +18,7 @@ def test_set(preprocessed_df,student_id,course_df):
             validation_set.append((trainSet.to_raw_uid(targetUser),
                                       trainSet.to_raw_iid(iid),
                                       fillValue))
-    print("Student",student_id,"has" ,len(validation_set),"unenrolled courses")
+    #print("Student",student_id,"has" ,len(validation_set),"unenrolled courses")
     
     enrolled=course_df.loc[course_df['course_id'].isin(user_items)]['course_name'].to_list()
     return validation_set,enrolled
