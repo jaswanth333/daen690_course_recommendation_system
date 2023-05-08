@@ -49,6 +49,7 @@ The following table represents the scores achieved on Distance based Learning al
 | KNNWithZScore | 1.126     | 0.669      | 0.468     |                 0.7               |               0.82             |
 | NMF           | 1.191     | 0.231      | 0.012     |                0.69               |               0.81             |
 </p>
+
 # Results
 <p align="justify"> 
 After evaluating the model accuracy, build time, test time,precision and recall it can be concluded that the Baseline Matrix factorization model SVD is performing better .This model is capable of handling missing values  and noise in the data and data sparsity problems. Finally, with the SVD algorithm in place an user interactive function with preprocessing pipeline and test set creation pipeline has been implemented. 
