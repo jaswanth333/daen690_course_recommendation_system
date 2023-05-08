@@ -155,5 +155,5 @@ def preprocess(df):
     final_df=df[['student_id','student_name','age','nationality',
        'education','school','field_of_interest','course_id',
        'course_name','session','course_rating','difficulty_level','modes_of_learning']]
-    print("-------------------------Data preprocessed---------------------------")
+    #print("-------------------------Data preprocessed---------------------------")
     return final_df
