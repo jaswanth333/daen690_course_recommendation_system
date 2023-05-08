@@ -38,7 +38,7 @@ git clone https://github.com/jaswanth333/daen690_course_recommendation_system
 To evaluate the model performance of distanced based learning algorithms and Matrix factorization alsogirthms we did 5 fold cross validation on the data to obtain (RMSE) Root Mean Square Error and calcuated the training and test time. In addition to that we have calculated the relavant recommendations being provided in the top 5 recommendations of cross validated test data using Mean Average Precision @ k and Mean Average Recall @ k.  
 
 The following table represents the scores achieved on Distance based Learning algorithm i.e. KNN as well as the Matrix Factorization Algorithms such as SVD,SVDpp and NMF.
-</p>
+
 
 | Model         | Test RMSE | Train Time | Test Time |     Mean Average Precision @ k    |     Mean Average Recall @ k    |
 |---------------|-----------|------------|-----------|:---------------------------------:|:------------------------------:|
@@ -48,7 +48,7 @@ The following table represents the scores achieved on Distance based Learning al
 | KNNWithMeans  | 1.117     | 0.567      | 0.452     |                0.63               |               0.93             |
 | KNNWithZScore | 1.126     | 0.669      | 0.468     |                 0.7               |               0.82             |
 | NMF           | 1.191     | 0.231      | 0.012     |                0.69               |               0.81             |
-
+</p>
 # Results
 <p align="justify"> 
 After evaluating the model accuracy, build time, test time,precision and recall it can be concluded that the Baseline Matrix factorization model SVD is performing better .This model is capable of handling missing values  and noise in the data and data sparsity problems. Finally, with the SVD algorithm in place an user interactive function with preprocessing pipeline and test set creation pipeline has been implemented. 
